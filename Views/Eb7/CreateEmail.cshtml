@@ -1,6 +1,5 @@
 @model EB7.Models.Email
 
-
 <form method="post" asp-action="CreateEmail">
   
   <label asp-for="EmailTitle"></label><br />
@@ -8,6 +7,8 @@
   <br />
   <hr />
   
+  <input type="submit" value="CreateEmail" />
   
-  
+  <a asp-action="Index">Back to emails list</a> 
+ 
 </form>
