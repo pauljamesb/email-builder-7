@@ -43,6 +43,7 @@ namespace Eb7.Controllers
         
                 
                 // Edit
+                // To get and display item to edit
                 public async Task<IActionResult> EditEmail(int? id)
                 {
                         if(id == null)
@@ -57,6 +58,8 @@ namespace Eb7.Controllers
                         }
                         return View(emailToEdit);
                 }
+                
+                // To edit the actual item
                 
                 
                 
