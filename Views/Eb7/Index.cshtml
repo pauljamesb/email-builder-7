@@ -1,1 +1,13 @@
 @model IEnumerable<EB7.Models.Email>
+  
+  <h3>List of emails</h3>
+  
+  @foreach(var el in Model)
+  {
+      @Html.DisplayFor(m => el.EmailTitle)
+      <br />
+      <hr />
+      @Html.DisplayFor(m => el.EmailBody)
+      <br />
+      <hr />
+  }
