@@ -27,6 +27,12 @@ namespace Eb7.Controllers
                 {
                         return View();
                 }
+                
+                [HttpPost]
+                [ValidateAntiForgeryToken]
+                public async Task<IActionResult> CreateEmail()
+                {
+                }
         
         }
 }
