@@ -1,1 +1,17 @@
 @model EB7.Models.Email
+
+<form method="post" asp-action="EditEmail">
+  <input type="hidden" asp-for="Id" />
+  
+  <label asp-for="EmailTitle"></label>
+  <input asp-for="EmailTitle">
+  <br />
+  <hr />
+  <label asp-for="EmailBody"></label>
+  <input asp-for="EmailBody">
+  <br />
+  <hr />
+  
+  <input type="submit" asp-route-id="@Model.Id" value="Update" />
+  
+</form>
