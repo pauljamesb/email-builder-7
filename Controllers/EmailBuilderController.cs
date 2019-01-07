@@ -9,5 +9,12 @@ namespace Eb7.Controllers
 {
         public class EB7 : Controller
         {
+        
+                private readonly ApplicationDbContext _db;
+                public EB7(ApplicationDbContext db)
+                {
+                        _db = db;
+                }
+        
         }
 }
