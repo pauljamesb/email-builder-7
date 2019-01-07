@@ -30,8 +30,15 @@ namespace Eb7.Controllers
                 
                 [HttpPost]
                 [ValidateAntiForgeryToken]
-                public async Task<IActionResult> CreateEmail()
+                public async Task<IActionResult> CreateEmail(Email email)
                 {
+                        if(ModelState.IsValid)
+                        {
+                                _db.Add(email);
+                                await _db.SaveChangesAsync();
+                                return RedirectToAction("Index");
+                        }
+                        return View(email);
                 }
         
         }
