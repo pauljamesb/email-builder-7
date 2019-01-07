@@ -15,6 +15,11 @@ namespace Eb7.Controllers
                 {
                         _db = db;
                 }
+                
+                public IActionResult Index()
+                {       
+                        return View(_db.EmailsDb.ToList());
+                }
         
         }
 }
