@@ -20,6 +20,13 @@ namespace Eb7.Controllers
                 {       
                         return View(_db.EmailsDb.ToList());
                 }
+                
+                
+                // Create actions
+                public IActionResult CreateEmail()
+                {
+                        return View();
+                }
         
         }
 }
