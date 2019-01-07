@@ -41,5 +41,25 @@ namespace Eb7.Controllers
                         return View(email);
                 }
         
+                
+                // Edit
+                public async Task<IActionResult> EditEmail(int? id)
+                {
+                        if(id == null)
+                        {
+                                return NotFound();
+                        }
+                        
+                        var emailToEdit = await _db.EmailsDb.FindAsync(id);
+                        if (emailToEdit == null)
+                        {
+                                return NotFound();
+                        }
+                        return View(emailToEdit);
+                }
+                
+                
+                
+        
         }
 }
